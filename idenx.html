@@ -1,0 +1,211 @@
+```html
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>FoodZap Delivery - SEM UX</title>
+
+<style>
+
+body{
+    margin:0;
+    font-family:Comic Sans MS;
+    background:lime;
+}
+
+/* HEADER BAGUNÇADO */
+
+header{
+    background:red;
+    padding:5px;
+    text-align:center;
+    border-bottom:10px dashed yellow;
+}
+
+header h1{
+    color:blue;
+    font-size:50px;
+    text-shadow:5px 5px pink;
+}
+
+/* MENU RUIM */
+
+nav{
+    background:purple;
+    padding:20px;
+    text-align:left;
+}
+
+nav a{
+    color:yellow;
+    margin-right:50px;
+    font-size:25px;
+    text-decoration:none;
+    background:black;
+    padding:5px;
+}
+
+/* BANNER EXAGERADO */
+
+.banner{
+    background:orange;
+    height:250px;
+    text-align:center;
+    padding-top:50px;
+}
+
+.banner h2{
+    font-size:60px;
+    color:red;
+}
+
+.banner button{
+    font-size:30px;
+    background:blue;
+    color:white;
+    border:none;
+    padding:20px;
+    cursor:pointer;
+}
+
+/* PRODUTOS DESORGANIZADOS */
+
+.produtos{
+    padding:20px;
+}
+
+.card{
+    width:300px;
+    background:white;
+    border:10px dotted red;
+    margin:40px;
+    display:inline-block;
+    vertical-align:top;
+    text-align:center;
+}
+
+.card img{
+    width:100%;
+    height:180px;
+}
+
+.card h3{
+    font-size:35px;
+    color:purple;
+}
+
+.card p{
+    font-size:25px;
+    color:red;
+}
+
+.card button{
+    background:black;
+    color:yellow;
+    font-size:25px;
+    padding:20px;
+    margin-bottom:20px;
+    cursor:pointer;
+}
+
+/* CARRINHO CONFUSO */
+
+.carrinho{
+    background:cyan;
+    padding:30px;
+    margin-top:50px;
+    border-top:20px solid red;
+}
+
+.carrinho h2{
+    font-size:50px;
+    color:purple;
+}
+
+#lista{
+    font-size:30px;
+    color:red;
+}
+
+/* FOOTER FEIO */
+
+footer{
+    background:black;
+    color:lime;
+    text-align:center;
+    padding:40px;
+    font-size:30px;
+}
+
+</style>
+</head>
+<body>
+
+<header>
+    <h1>🍔 FOODZAP DELIVERY 🍕</h1>
+</header>
+
+<nav>
+    <a href="#">HOME</a>
+    <a href="#">PROMOÇÃO</a>
+    <a href="#">PEDIDOS</a>
+    <a href="#">CONTATO</a>
+    <a href="#">CLIQUE AQUI</a>
+</nav>
+
+<section class="banner">
+    <h2>PEÇA AGORA!!!!</h2>
+    <button>PEDIR JÁ</button>
+</section>
+
+<section class="produtos">
+
+    <div class="card">
+        <img src="https://images.unsplash.com/photo-1568901346375-23c9450c58cd?q=80&w=800" alt="">
+        <h3>Hambúrguer</h3>
+        <p>R$ 39,99</p>
+        <button onclick="adicionar('Hambúrguer')">COMPRAR</button>
+    </div>
+
+    <div class="card">
+        <img src="https://images.unsplash.com/photo-1513104890138-7c749659a591?q=80&w=800" alt="">
+        <h3>Pizza</h3>
+        <p>R$ 79,99</p>
+        <button onclick="adicionar('Pizza')">COMPRAR</button>
+    </div>
+
+    <div class="card">
+        <img src="https://images.unsplash.com/photo-1571091718767-18b5b1457add?q=80&w=800" alt="">
+        <h3>Batata</h3>
+        <p>R$ 25,99</p>
+        <button onclick="adicionar('Batata')">COMPRAR</button>
+    </div>
+
+</section>
+
+<section class="carrinho">
+    <h2>CARRINHO</h2>
+    <ul id="lista"></ul>
+</section>
+
+<footer>
+    DELIVERY MAIS RÁPIDO DO MUNDO!!!
+</footer>
+
+<script>
+
+function adicionar(produto){
+    let lista = document.getElementById("lista");
+
+    let item = document.createElement("li");
+    item.innerText = produto + " adicionado!";
+    
+    lista.appendChild(item);
+}
+
+</script>
+
+</body>
+</html>
+```
